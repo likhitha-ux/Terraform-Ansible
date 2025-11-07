@@ -1,6 +1,6 @@
 # 📚 Vignan University Digital Library  
 
-A **web application** built with **HTML, CSS, and Spring Boot (Tomcat)** to showcase the **Digital Library of Vignan University**.  
+A **web application** built with **HTML, CSS, and Spring Boot** to showcase the **Digital Library of Vignan University**.  
 This branch (`library`) focuses on the **frontend UI** for presenting e‑books, research papers, and video lectures in a modern, responsive design.
 
 ---
