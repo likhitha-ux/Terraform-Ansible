@@ -4,6 +4,7 @@
 
 This repository provisions AWS infrastructure using **Terraform** and manages application deployments with **Ansible**.  
 📚 Digital Library → hosted on Worker 1
+
 🐍 Snake Game → hosted on Worker 2
 - The **main branch** focuses on **core infrastructure setup**.  
 - Other branches (e.g., `library`, `snakegame`) showcase **application deployments** on top of this infra. 
