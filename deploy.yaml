@@ -1,0 +1,16 @@
+- name: Deploy library App on worker1
+  hosts: worker1
+  become: yes
+  tasks:
+    - name: Stop old container
+      command: docker rm -f library
+      ignore_errors: yes
+
+    - name: Pull latest image
+      command: docker pull likhithaaa/library:latest
+
+    - name: Run new container
+      command: >
+        docker run -d --name library
+        -p 8081:80
+       likhithaaa/library:latest
