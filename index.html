@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaky Snake Game</title>
+    <link rel="stylesheet" href="statics/css/style.css">
+    <link rel="icon" href="assets/images/icon/favicon.png" type="image/png">
+</head>
+<body>
+    <section id="main-section">
+        <div id="high-scores-container">
+            <h2><span>Top 10</span><br><span>High Scores</span></h2>
+            <ol id="high-scores-list"></ol>
+        </div>
+        <div id="game-container">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="button-container">
+            <button id="new-game-btn" onclick="location.reload()">New Game</button>
+            <button id="toggle-bg-btn" onclick="toggleBackground()">Toggle Background</button>
+            <button id="pause-btn" onclick="togglePause()">Pause/Resume Game</button>
+            <button id="snake-color-btn" onclick="changeSnakeColor()">Change Snake Color</button>
+            <button id="food-color-btn" onclick="changeFoodColor()">Change Food Color</button>
+            <button id="demo-btn" onclick="startDemo()">Run Snake Demo</button>
+            <div id="demo-speed-container" style="display: none;">
+                <label for="demo-speed">Demo Speed:</label>
+                <input id="demo-speed" type="number" value="100" min="30" max="300" step="50" onchange="updateDemoSpeed()">
+            </div>
+        </div>
+    </section>
+
+    <div id="score-container">
+        <div id="score">Score: 0</div>
+        <div id="level">Level: 1</div>
+    </div>
+
+    <div class="popup-message"></div>
+
+    <div id="demo-popup">
+        <img src="assets/images/demo/demo-image.webp" alt="Snake Demo">
+        <button onclick="restartDemo()">Run Demo Again</button>
+        <button onclick="closeDemoPopup()">Play Game</button>
+    </div>
+
+    <footer id="footer">
+        <div class="donate-container">
+            <button id="donate-btn-patreon" onclick="window.open('https://www.patreon.com/ctechdigital', '_blank')">Donate at Patreon</button>
+        </div>
+        <img src="assets/images/logo/ctechdigital.png" alt="CTechDigital.com" class="footer-logo">
+        <p>Created by <a href="https://www.ctechdigital.com" target="_blank">CTech Digital.com</a> | 
+        <a href="https://github.com/CTechDigitalpt" target="_blank" class="social-link">
+            <img src="assets/images/social/light/github.svg" alt="GitHub" class="social-icon">
+        </a>
+        <a href="https://x.com/CTechDigital" target="_blank" class="social-link">
+            <img src="assets/images/social/light/twitter-x.svg" alt="Twitter" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/ctechdigitalcom/" target="_blank" class="social-link">
+            <img src="assets/images/social/light/instagram.svg" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://tiktok.com/@ctechdigital.com" target="_blank" class="social-link">
+            <img src="assets/images/social/light/tiktok.svg" alt="TikTok" class="social-icon">
+        </a>
+        </a>
+        <a href="https://www.linkedin.com/company/ctech-digital/" target="_blank" class="social-link">
+            <img src="assets/images/social/light/linkedin.svg" alt="LinkedIn" class="social-icon">
+        </a>
+        </a>
+        <a href="https://www.youtube.com/@CTech_Digital" target="_blank" class="social-link">
+            <img src="assets/images/social/light/youtube.svg" alt="YouTube" class="social-icon">
+        </a>   
+        </a>
+   
+        | A fun implementation of the classic Snake game</p>
+        
+        <div class="donate-container">
+            <button id="donate-btn-paypal" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=FBG94CBRX3T5N', '_blank')">Donate at PayPal</button>
+        </div>
+
+        <div class="donate-container">
+            <button id="donate-btn-kofi" onclick="window.open('https://ko-fi.com/ctechdigitalcom', '_blank')">Donate at Ko-FI</button>
+        </div>
+    </footer>
+
+    <script src="statics/js/snakegame.js"></script>
+    <script src="statics/js/snake-demo.js"></script>
+    <script src="statics/js/high-scores.js"></script>
+</body>
+</html>
