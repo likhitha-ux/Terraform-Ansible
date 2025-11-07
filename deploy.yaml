@@ -1,0 +1,16 @@
+- name: Deploy snakegame App on worker2
+  hosts: worker2
+  become: yes
+  tasks:
+    - name: Stop old container
+      command: docker rm -f snakegame
+      ignore_errors: yes
+
+    - name: Pull latest image
+      command: docker pull likhithaaa/snakegame:latest
+
+    - name: Run new container
+      command: >
+        docker run -d --name snakegame
+        -p 8081:80
+       likhithaaa/snakegame:latest
